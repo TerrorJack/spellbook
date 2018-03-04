@@ -1,4 +1,4 @@
-import Spellbook.Internals
+import Spellbook.Process
 
 main :: IO ()
 main = getParentProcessArgs >>= print

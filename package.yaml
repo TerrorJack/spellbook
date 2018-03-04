@@ -31,6 +31,8 @@ when:
 
 library:
   source-dirs: src
+  other-modules:
+    - Spellbook.Internals
   when:
     - condition: os(windows)
       then:
