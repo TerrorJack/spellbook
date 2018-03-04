@@ -5,11 +5,11 @@ jobs:
       - image: terrorjack/vanilla:haskell
     steps:
       - checkout
-	  - restore_cache:
+      - restore_cache:
           key: stack-work-
       - run: stack --no-terminal build --haddock
-	  - save_cache:
+      - save_cache:
           key: stack-work-
           paths:
             - /root/.stack
-			- .stack-work
+            - .stack-work
