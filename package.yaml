@@ -1,0 +1,20 @@
+name: spellbook
+version: 0.0.1
+stability: alpha
+maintainer: Shao Cheng <astrohavoc@gmail.com>
+copyright: (c) 2018 Shao Cheng
+license: BSD3
+github: TerrorJack/spellbook
+
+extra-source-files:
+  - CHANGELOG.md
+  - LICENSE
+  - README.md
+  
+ghc-options: -Wall
+
+dependencies:
+  - base
+
+library:
+  source-dirs: src

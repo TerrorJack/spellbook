@@ -1,0 +1,14 @@
+version: 0.0.1.{build}
+
+shallow_clone: true
+
+cache:
+  - "%APPDATA%\\stack"
+  - .stack-work
+
+build_script:
+  - choco install haskell-stack
+  - stack --no-terminal setup > NUL
+  - stack --no-terminal build --haddock
+
+test: off
