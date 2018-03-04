@@ -9,6 +9,6 @@ cache:
 build_script:
   - choco install haskell-stack
   - cd .. && stack --no-terminal --resolver nightly-2018-03-01 setup > NUL && stack --no-terminal install hpack && cd spellbook
-  - stack --no-terminal --with-hpack=hpack.exe build --haddock --test
+  - stack --no-terminal --with-hpack=C:\\Users\\appveyor\\AppData\\Roaming\\local\\bin\\hpack.exe build --haddock --test
 
 test: off
