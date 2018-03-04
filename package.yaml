@@ -10,11 +10,41 @@ extra-source-files:
   - CHANGELOG.md
   - LICENSE
   - README.md
-  
+
 ghc-options: -Wall
 
 dependencies:
   - base
+  - bytestring
+  - Cabal
+  - process
+  - template-haskell
+
+when:
+  - condition: os(windows)
+    then:
+      dependencies:
+        - Win32
+    else:
+      dependencies:
+        - unix
 
 library:
   source-dirs: src
+  when:
+    - condition: os(windows)
+      then:
+        other-modules:
+          - Spellbook.Internals.Windows
+      else:
+        other-modules:
+          - Spellbook.Internals.Unix
+  other-extensions:
+    - CPP
+
+tests:
+  spellbook-test:
+    source-dirs: test
+    main: spellbook-test.hs
+    dependencies:
+      - spellbook

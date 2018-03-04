@@ -9,6 +9,6 @@ cache:
 build_script:
   - choco install haskell-stack
   - stack --no-terminal setup > NUL
-  - stack --no-terminal build --haddock
+  - stack --no-terminal build --haddock --test
 
 test: off
