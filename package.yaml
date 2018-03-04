@@ -15,6 +15,7 @@ ghc-options: -Wall
 
 dependencies:
   - base
+  - binary
   - bytestring
   - Cabal
   - process
@@ -43,6 +44,7 @@ library:
           - Spellbook.Internals.Unix
   other-extensions:
     - CPP
+    - TemplateHaskell
 
 tests:
   spellbook-test:
